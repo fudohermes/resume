@@ -1,0 +1,153 @@
+\documentclass[11pt,letterpaper,sans]{moderncv}
+
+% moderncv styles: casual, classic, banking, oldstyle, fancy
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+
+% Page geometry
+\usepackage[scale=0.9]{geometry}
+
+% Encoding / typography
+\usepackage[T1]{fontenc}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+
+% Reduce blocky justification in bullet lists
+\AtBeginEnvironment{itemize}{\RaggedRight}
+\hyphenpenalty=7000
+\exhyphenpenalty=7000
+\righthyphenmin=4
+\emergencystretch=2em
+
+% Personal data
+\name{Peter}{Selby}
+\address{8329 129th Pl SE}{Newcastle, WA}{}
+\phone[mobile]{(805)~604~5298}
+\email{peter@selby.ca}
+
+\begin{document}
+\makecvtitle
+\pagestyle{empty}
+
+\section{Summary}
+\cvitem{}{Software engineer with 10+ years of experience building and scaling distributed systems, developer platforms, and internal tools at Google, Apple, Amazon, and ByteDance. Skilled in backend architecture, data processing, and full-stack development. Passionate about building reliable, high-performance systems and tools.}
+
+\section{Technical Skills}
+\cvitem{Languages}{Java, C++, Go, Scala, Python, JavaScript, Clojure, Lisp, SQL, Erlang}
+\cvitem{Architecture}{Distributed systems, Kubernetes, REST APIs, data processing with Hadoop \& Spark, microservices}
+\cvitem{Infrastructure \& Tooling}{Kubernetes, Docker, NixOS, AWS, CI/CD pipelines, Linux \& Unix, encryption, profiling, database design \& optimization, benchmarking}
+
+\section{Experience}
+
+\cventry
+  {2023--2025}
+  {Site Reliability Engineer}
+  {ByteDance Inc}
+  {Bellevue, WA}
+  {}
+  {
+    \begin{itemize}
+      \item Worked on real-time communication (RTC) infrastructure for
+        large-scale live streaming.
+      \item Designed and implemented a distributed rolling upgrade system for
+        worldwide RTC media ingress nodes, enabling safe and automated fleet
+        upgrades with minimal redundancy or capacity loss. Reduced deployment
+        cycle from multiple weeks to a 24-hour release, increasing development
+        velocity and service reliability.
+      \item Created, modified and/or maintained various cloud services in Python
+        and Go.
+    \end{itemize}
+  }
+
+\cventry
+  {2016--2021}
+  {Site Reliability Engineer}
+  {Google Inc}
+  {Kirkland, WA}
+  {}
+  {
+    \begin{itemize}
+      \item Integrated complex service configurations with Google's internal
+        configuration management platform, rewriting multiple RTC services
+        (including telephony, chat, and video) to safely consume, validate,
+        apply, and monitor live configuration updates. Supported canaries, A/B
+        testing, and automated rollbacks. Partnered with 5+ development teams to
+        standardize configuration logic and ensure consistent behavior across
+        heterogeneous systems serving 100M+ users.
+      \item Redesigned and replaced the cloud rollout system for 20+ RTC
+        services, implementing multi-stage canarying, key-metric monitoring, and
+        automated regression analysis, enabling data-driven rollout and rollback
+        decisions. Reduced rollout risk and improved release velocity across a
+        multi-team production environment.
+      \item Collaborated with cross-functional teams to refactor core RTC
+        services to improve performance, scalability, and observability.
+    \end{itemize}
+  }
+
+\cventry
+  {2015--2016}
+  {Full Stack Engineer}
+  {Apple Inc}
+  {Cupertino, CA (Remote)}
+  {}
+  {
+    \begin{itemize}
+    \item Built internal web applications to support Apple Maps Transit, including an infinite-scrolling POI data editor, enabling faster data-entry workflows to accelerate the launch of Apple Transit.
+    \item Designed features from the backend to the web UI, using a combination of PostgreSQL, Scala and JavaScript.
+    \item Designed data models and validation workflows enabling rapid editing and publishing of curated transit mapping data provided by on-site contractors.
+    \end{itemize}
+  }
+
+\cventry
+  {2013--2015}
+  {SDE II / Technical Program Manager}
+  {Amazon.com}
+  {Seattle, WA}
+  {}
+  {
+    \begin{itemize}
+      \item Led the design and development of a large-scale financial reporting platform, generating daily company-wide fine-grained P\&L reports.
+      \item Worked with users and stakeholders to gather requirements, pitch alternatives, and determine direction.
+      \item Designed and built data ingestion and aggregation services in Scala and SQL, among the first at Amazon to leverage AWS Redshift.
+      \item Bootstrapped a new engineering team, assisted with roadmap and goals, and took a leading role in architecture and technology-stack design.
+      \item Developed an interactive query service in Scala to enable richer interaction with financial data, allowing users without a SQL background to perform deeper analysis of daily reporting data.
+      \item Launched AWS cloud-native platform service for company-wide use within Amazon.
+    \end{itemize}
+  }
+
+\cventry
+  {2011--2013}
+  {Software Development Engineer I \& II}
+  {Amazon.com}
+  {Seattle, WA}
+  {}
+  {
+    \begin{itemize}
+    \item Engineered distributed ETL pipelines (Hadoop and SQL) producing daily financial and operational metrics at a per-shipment level across Amazon's global business.
+    \item Designed and implemented algorithms to allocate and reconcile diverse costs and revenue components, including liquidations, returns, shipping, and promotions, to individual shipments.
+    \item Partnered with finance and operations stakeholders to define heuristics, validate financial correctness, and integrate results into a company-wide reporting system used throughout Amazon to drive day-to-day business decisions.
+    \item Extended data coverage to new geographies and business domains, including FBA and 3P. Launched the data-processing pipeline for Amazon China.
+    \end{itemize}
+  }
+
+\section{Education}
+
+\cventry
+  {2008--2011}
+  {Master of Science, Computer Science}
+  {University of British Columbia}
+  {Vancouver, BC}
+  {}
+  {
+    Focus areas included Distributed Systems, Operating Systems, Cloud Computing, Multi-Agent Systems, and Game Theory. Selected projects included building two variants of a peer-to-peer distributed filesystem (directory-server and DHT-based) exploring metadata scalability, and implementing a proof-of-concept alternative to object-oriented programming in Lisp where objects emerged dynamically via pattern matching.
+  }
+
+\cventry
+  {2003--2008}
+  {Bachelor of Science, Honours, Computer Science}
+  {University of Winnipeg}
+  {Winnipeg, MB}
+  {}
+  {}
+
+\end{document}
